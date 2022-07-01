@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mypackage-name
+Version: 1.0
+Summary: My Package Description
+Home-page: https://my.package.url
+Author: Sergii Tishchenko
+Author-email: contact@demo.com
+License: UNKNOWN
+Description: ### THis is a demo for a python package creation
+        mypackage-name
+        ### build
+        ```bash
+        python -m build 
+        python setup.py  bdist_wheel --universal
+        ```
+        
+        ### install
+        ```bash
+        pip install [-e] .
+        pip install dist/... --force-reinstall
+        ```
+        
+Keywords: mypackage for product test
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

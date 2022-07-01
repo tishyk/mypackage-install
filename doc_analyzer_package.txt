@@ -1,0 +1,32 @@
+Create your own python package - doc_analyzer
+										|
+add possibility to analize pdf docs		pdf_analizer  (inside of the doc_analyzer package)
+
+pdf_analizer module should have LinkAnalyzer class instance initiated in the PDFAnalyzer class 
+To construct these classes you need to set path_to_pdf.
+LinkAnalyzer class must have collect_links, review_link, review_links, clean and make_report methods to handle pdf files links
+
+Dependancies - https://github.com/euske/pdfminer, requests
+
+Create __main__.py file with user prompt for doc_analyzer package:
+ analyzer type --> document path --> choose action: 
+	collect_links, review_link, review_links, clean and make_report methods
+	
+User workflow case 1:
+	Run command in terminal: python -m doc_analyzer
+	Follow the created prompts for the user without errors
+	
+User workflow case 2:
+	create main.py file
+	import in main.py file doc_analyzer.py package
+	create user instance with line pdf = doc_analyzer.PDFAnalyzer({path_to_pdf})
+	Next lines of code should just work:
+		links = pdf.link_analyzer.collect_links() --> List, list with collected html links from provided pdf file
+		pdf.link_analyzer.review_link(links[0]) --> Bool, return False in case of broken link or True in case of requests.ok 
+		pdf.link_analyzer.review_links(links[2:9] or empy) --> return dict with link as a key and respond as value, show warning message in case of broken link but do not fail
+		pdf.link_analyzer.make_report()  --> save dict into report_date_time_number_of_links.txt date and time with _ seperator
+		pdf.link_analyzer.clean()		--> clean all collected links
+		
+Create you own python whl package
+Upload sources to your own github repo and create a Readme file for doc_analyzer tool
+Force update local package with command "pip install git+https://github.com/tangentlabs/django-oscar-paypal.git@issue/34/oscar-0.6"

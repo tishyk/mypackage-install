@@ -1,0 +1,5 @@
+requests>=2.21.0
+xmltodict
+pytest
+pytest-html
+pytest-order
