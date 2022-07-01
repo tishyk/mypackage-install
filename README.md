@@ -1,4 +1,4 @@
-### THis is a demo for a python package creation
+### This is a demo for a python package creation
 mypackage-name
 ### build
 ```bash
