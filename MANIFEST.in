@@ -1,3 +1,9 @@
-include README.md requirements.txt __main__.py
+include README.md requirements.txt
+global-include *.py
+global-include *.xml
+global-include *.json
 recursive-include my_config/ *
-recursive-include test_data/homeworks/ *
+recursive-include test_data/homeworks *
+exclude *.pyc
+global-exclude *venv*
+
